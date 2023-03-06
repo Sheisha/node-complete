@@ -66,7 +66,7 @@ const accessLogStream = fs.createWriteStream(
     {flags: 'a'}
 );
 
-app.use(helmet());
+// app.use(helmet());
 app.use(compression()); // micsoreaza size-ul cssurilor
 app.use(morgan('combined', {stream: accessLogStream})); //requesturi in file access.log
 
